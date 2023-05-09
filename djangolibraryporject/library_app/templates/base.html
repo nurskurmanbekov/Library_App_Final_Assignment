@@ -23,13 +23,20 @@
                         <li><a href="{% url 'authors_create_url_nickname' %}">Add an Author</a></li>
                         <li><a href="{% url 'authors_index_url_nickname' %}">View All My Authors</a></li>
                         <li><a href="{% url 'logout' %}">Log Out</a></li>
-                    {% else %}
-                        <li><a href="{% url 'login' %}">Sign Up</a></li>
+                    {% else %} 
+                        <li><a href="{% url 'signup_url_nickname' %}">Sign Up</a></li>
                         <li><a href="{% url 'login' %}">Log In</a></li>
                     {% endif %}
                 </ul>
             </div>
         </nav>
     </header>
+    <main>
+        {% block content%}
+        {% endblock %}
+    </main>
+    <footer class='page-footer blue'>
+        <div class = 'right'>Nurs Technology, &copy; Django Library &nbsp;</div>
+    </footer>
 </body>
 </html>
